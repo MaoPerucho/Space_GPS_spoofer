@@ -1669,10 +1669,35 @@ void usage(void)
 	return;
 }
 
-int main(int argc, char *argv[])
+int main()
 {
-	clock_t tstart,tend;
 
+    //argumen put in this file manually 
+    //to control all the flow in this and get the same
+    //result  like i put the parameters in the cmd
+    char *argv[7];
+	int argc=7;
+	argv[0]="gpssim";
+	argv[1]="-b";
+	argv[2]="8";
+	argv[3]="-e";
+	argv[4]="brdc3540.14n";
+	argv[5]="-l";
+	argv[6]="30,60,100";
+
+
+	printf("%d",argc);
+	printf("\n");
+
+
+	for (int i = 0; i<argc; ++i)
+	{
+         printf("%s",argv[i]);
+		 printf("\n");
+	}
+
+
+	clock_t tstart,tend;
 	FILE *fp;
 
 	int sv;
