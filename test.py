@@ -6,7 +6,7 @@ This is a temporary script file.
 """
 
 
-import subprocess
+# import subprocess
 
 # p1 = subprocess.run(['D:/kraken/Space_GPS_spoofer/gpssim.exe'], capture_output=True,text=True)
 # print(p1.args)

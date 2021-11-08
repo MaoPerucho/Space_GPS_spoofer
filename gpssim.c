@@ -1696,7 +1696,7 @@ int main(char param1, char param2, char param3, char param4, char param5, char p
 	argv[1]=&param1;
 	argv[2]=&param2;
 	argv[3]=&param3;
-	argv[4]=&param4;
+	argv[4]="brdc3540.14n";
 	argv[5]=&param5;
 	argv[6]=&param6;
 
