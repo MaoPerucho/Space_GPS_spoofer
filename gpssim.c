@@ -1669,7 +1669,7 @@ void usage(void)
 	return;
 }
 
-int main()
+int main(char param1, char param2, char param3, char param4, char param5, char param6)
 {
 
     //argumen put in this file manually 
@@ -1677,13 +1677,29 @@ int main()
     //result  like i put the parameters in the cmd
     char *argv[7];
 	int argc=7;
+	//argv[0]="gpssim";
+	//argv[1]="-b";
+	//argv[2]="8";
+	//argv[3]="-e";
+	//argv[4]="brdc3540.14n";
+	//argv[5]="-l";
+	//argv[6]="30,60,100";
+
+
+    //the change to receive my arguments from python 
+	//and operate it in this program
+	//to transform this file in a shared file to use it in 
+	//a python file to stream all their values
+	//comand:
+	//gcc -o namelib.so --shared -fPIC gpssim.c
 	argv[0]="gpssim";
-	argv[1]="-b";
-	argv[2]="8";
-	argv[3]="-e";
-	argv[4]="brdc3540.14n";
-	argv[5]="-l";
-	argv[6]="30,60,100";
+	argv[1]=&param1;
+	argv[2]=&param2;
+	argv[3]=&param3;
+	argv[4]=&param4;
+	argv[5]=&param5;
+	argv[6]=&param6;
+
 
 
 	printf("%d",argc);
