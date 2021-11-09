@@ -1669,14 +1669,14 @@ void usage(void)
 	return;
 }
 
-int main(char param1, char param2, char param3, char param4, char param5, char param6)
+int func_mod(int argc,char* argv[])
 {
-
+	
     //argumen put in this file manually 
     //to control all the flow in this and get the same
     //result  like i put the parameters in the cmd
-    char *argv[7];
-	int argc=7;
+	//int argc; char *argv[7];
+    //argc=7;
 	//argv[0]="gpssim";
 	//argv[1]="-b";
 	//argv[2]="8";
@@ -1684,6 +1684,7 @@ int main(char param1, char param2, char param3, char param4, char param5, char p
 	//argv[4]="brdc3540.14n";
 	//argv[5]="-l";
 	//argv[6]="30,60,100";
+	//param1=*"2";
 
 
     //the change to receive my arguments from python 
@@ -1692,13 +1693,6 @@ int main(char param1, char param2, char param3, char param4, char param5, char p
 	//a python file to stream all their values
 	//comand:
 	//gcc -o namelib.so --shared -fPIC gpssim.c
-	argv[0]="gpssim";
-	argv[1]=&param1;
-	argv[2]=&param2;
-	argv[3]=&param3;
-	argv[4]="brdc3540.14n";
-	argv[5]=&param5;
-	argv[6]=&param6;
 
 
 
@@ -2402,4 +2396,21 @@ int main(char param1, char param2, char param3, char param4, char param5, char p
 	fprintf(stderr, "Process time = %.1f [sec]\n", (double)(tend-tstart)/CLOCKS_PER_SEC);
 
 	return(0);
+	
+	
+}
+
+int main()
+{
+	char *argvs[7];
+	argvs[0]="gpssim";
+	argvs[1]="-b";
+	argvs[2]="8";
+	argvs[3]="-e";
+	argvs[4]="brdc3540.14n";
+	argvs[5]="-l";
+	argvs[6]="30,60,100";
+	func_mod(7,argvs);
+
+
 }
