@@ -1675,8 +1675,8 @@ int func_mod(int argc,char* argv[])
     //argumen put in this file manually 
     //to control all the flow in this and get the same
     //result  like i put the parameters in the cmd
-	//int argc; char *argv[7];
-    //argc=7;
+    char *argv[7];
+	int argc=7;
 	//argv[0]="gpssim";
 	//argv[1]="-b";
 	//argv[2]="8";
@@ -1684,7 +1684,17 @@ int func_mod(int argc,char* argv[])
 	//argv[4]="brdc3540.14n";
 	//argv[5]="-l";
 	//argv[6]="30,60,100";
-	//param1=*"2";
+
+
+    //the change to receive my arguments from python 
+	//and operate it in this program
+	argv[0]="gpssim";
+	argv[1]=&param1;
+	argv[2]=&param2;
+	argv[3]=&param3;
+	argv[4]=&param4;
+	argv[5]=&param5;
+	argv[6]=&param6;
 
 
     //the change to receive my arguments from python 
